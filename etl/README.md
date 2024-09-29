@@ -11,11 +11,18 @@ Também utilizando os dados de viagens de táxi realizadas em New York, agora va
 (**Pré-Work:** Clonar o repositório Git em ambiente local.)
 
 - O primeiro passo é acessar o link do dataset e baixá-lo na pasta **dataset/** - [Link do dataset](https://kanastra.notion.site/Take-Home-Test-93ed920a63994d86a8090a9cba3fd08f)
-- Ajustar o código etl_code.py incluindo o diretório local que foi salvo o repositório:
-  ```python
-      # Construir as imagens 
-      docker-compose build
+- Ajustar o código [etl_code.py](etl/etl_code.py), incluindo o diretório local que foi salvo o repositório:
 
-      # Subir o ambiente
-      docker-compose up -d
+  ```python
+  # Execução do processo ETL
+  if __name__ == "__main__":
+      # Passar o diretório local que está salvo o projeto
+      etl = SparkETL(dataset_path="{LOCAL DIR}/dataset")
+      
+      # Carregamento e processamento dos dados
+      df = etl.load_data()
+      result = etl.transform(df)
+      
+      # Exportando os resultados - Alterar o LOCAL DIR para o diretório local que está salvo o projeto
+      etl.export(result, "{LOCAL DIR}/output/")
   ```
