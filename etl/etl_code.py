@@ -49,11 +49,12 @@ class SparkETL:
 
 # Execução do processo ETL
 if __name__ == "__main__":
-    etl = SparkETL(dataset_path="/home/igorloth/take_home_test/etl/code/dataset")
+    # Passar o diretório local que está salvo o projeto
+    etl = SparkETL(dataset_path="{LOCAL DIR}/dataset")
     
     # Carregamento e processamento dos dados
     df = etl.load_data()
     result = etl.transform(df)
     
-    # Exportando os resultados
-    etl.export(result, "/home/igorloth/take_home_test/etl/code/output/")
+    # Exportando os resultados - Alterar o LOCAL DIR para o diretório local que está salvo o projeto
+    etl.export(result, "{LOCAL DIR}/output/")
