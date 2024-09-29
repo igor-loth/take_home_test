@@ -41,4 +41,6 @@ Também utilizando os dados de viagens de táxi realizadas em New York, agora va
 
 ## Resultado
 
+- Esse será o output do processo ETL usando Pyspark:
+
 ![GET](images/excel_resultado.png)
