@@ -41,4 +41,4 @@ Também utilizando os dados de viagens de táxi realizadas em New York, agora va
 
 ## Resultado
 
-![GET](images/tree_orquestracao.png)
+![GET](images/excel_resultado.png)
