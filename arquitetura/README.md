@@ -10,7 +10,7 @@ Lembrando que não podemos ter corridas sem usuários cadastrados, então não p
 
 ## Desenho da Arquitetura
 
- ![GET](image/main_mage.png)
+ ![GET](images/pipeline.png)
  
 ## Ferramentas Utilizadas
 
